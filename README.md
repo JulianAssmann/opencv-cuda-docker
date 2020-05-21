@@ -1,6 +1,6 @@
 # OpenCV with CUDA Docker Image
-This repository contains Dockerfiles for creating Docker images of the [OpenCV](https://opencv.org/) computer vision library with NVIDIA CUDA support based on the [official CUDA images](https://hub.docker.com/r/nvidia/cuda/).
-The images contain the opencv_contrib modules and Python bindings.
+This repository contains Dockerfiles for creating Docker images of the [OpenCV](https://opencv.org/) computer vision library with [NVIDIA CUDA](https://developer.nvidia.com/cuda-zone) support based on the [official CUDA images](https://hub.docker.com/r/nvidia/cuda/).
+The images contain the [opencv_contrib](https://github.com/opencv/opencv_contrib) modules and Python bindings.
 
 Currently the images are based on the development (`devel`) version of the [images from Nvidia](https://hub.docker.com/r/nvidia/cuda/), so all the development tools are installed as well. It is on my TODO-List to include `base` and `runtime` versions corresponding to those from the Nvidia repository.
 
