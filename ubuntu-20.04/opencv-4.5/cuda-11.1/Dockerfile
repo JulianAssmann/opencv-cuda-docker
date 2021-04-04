@@ -5,7 +5,7 @@ ARG OPENCV_VERSION=4.5.0
 RUN apt-get update && apt-get upgrade -y &&\
     # Install build tools, build dependencies and python
     apt-get install -y \
-	    python-pip \
+	python3-pip \
         build-essential \
         cmake \
         git \
@@ -36,8 +36,6 @@ RUN apt-get update && apt-get upgrade -y &&\
         libgtk2.0-dev \
         pkg-config \
         ## Python
-        python-dev \
-        python-numpy \
         python3-dev \
         python3-numpy \
     && rm -rf /var/lib/apt/lists/*
