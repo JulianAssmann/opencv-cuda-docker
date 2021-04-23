@@ -2,6 +2,9 @@ FROM nvidia/cuda:11.1-devel-ubuntu20.04
 
 ARG OPENCV_VERSION=4.5.0
 
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update && apt-get upgrade -y &&\
     # Install build tools, build dependencies and python
     apt-get install -y \
