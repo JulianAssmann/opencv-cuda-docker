@@ -17,7 +17,7 @@ docker run julianassmann/opencv-cuda:cuda-10.2-opencv-4.2
 ```
 
 ## Building
-If for any reason you dont want to use one of the prebuilt images available on [Dockerhub](https://hub.docker.com/repository/docker/julianassmann/opencv-cuda/), you can build the image yourself. Navigate to the directory corresponding with the correct versions for Ubutnu, CUDA and OpenCV respectively you want to build and run
+Navigate to the directory corresponding with the correct versions for Ubuntu, CUDA and OpenCV respectively you want to build and run
 ```bash
 docker build -t <image_name> .
 ```
