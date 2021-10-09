@@ -1,5 +1,6 @@
 FROM nvidia/cuda:11.4.1-devel-ubuntu20.04
 
+ARG DEBIAN_FRONTEND=noninteractive
 ARG OPENCV_VERSION=4.5.3
 
 RUN apt-get update && apt-get upgrade -y &&\
@@ -54,6 +55,7 @@ RUN cd /opt/ &&\
     cmake \
         -DOPENCV_EXTRA_MODULES_PATH=/opt/opencv_contrib-${OPENCV_VERSION}/modules \
         -DWITH_CUDA=ON \
+        -DCUDA_ARCH_BIN=7.5,8.0,8.6 \
         -DCMAKE_BUILD_TYPE=RELEASE \
         # Install path will be /usr/local/lib (lib is implicit)
         -DCMAKE_INSTALL_PREFIX=/usr/local \
